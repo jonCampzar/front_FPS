@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,900;1,900&display=swap');
+
+h4,h6{
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 661;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+
+}
+
+#fill img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+}
+footer {
+  padding: 5px 0; /* Espaciado interno */
+  color: white;
+  text-align: center;
+}

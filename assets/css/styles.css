@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,900;1,900&display=swap');
 
-h4,h6{
+h4,h6,label{
     font-family: "Noto Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 661;

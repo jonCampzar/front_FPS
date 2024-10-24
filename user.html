@@ -1,136 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Información de usuario</title>
     <link rel="icon" href="assets/img/ipn_icon.jpg" />
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
     <!--CSS propio-->
     <link rel="stylesheet/text" href="/assets/css/styles.css" />
-</head>
-<body>
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark sticky-top"
+      style="background-color: #5a0f36"
+    >
+      <!-- sticky pone la barra estatica -->
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img class="img-logo" src="" alt="" />
+        </a>
 
-          <!--Navbar-->
-          <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #5A0F36;"> <!-- sticky pone la barra estatica -->
-            <div class="container">
-             <a class="navbar-brand" href="#">
-                 <img class="img-logo" src="" alt="">
-             </a>
-     
-             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
-             </button>
-             <div class="collapse navbar-collapse" id="navbarNav">
-               <ul class="navbar-nav ml-auto">
-                 <li class="nav-item active">
-                   <a class="nav-link" href="index.html">Cerrar sesión<span class="sr-only">(current)</span></a>
-                 </li>
-               </ul>
-             </div>
-            </div>
-           </nav>
-
-           <!--Titulos-->
-           <div id="tittle" class="text-center m-3 rounded-lg pt-4">
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <h4>
-                    Bienvenido JONATAN a tus registros de asistencia.
-                  </h4>
-                  <br />
-                  <div id="tittleinfo" class="text-left">
-                    <blockquote class="blockquote">
-                    <p>Aqui podras encontrar información relevante.</p>
-                  </blockquote>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="container">
-            <div id="info" class="row text-left m-1 pb-3 rounded-lg">
-              <ul class="list-group" style="width: 450px; font-weight: bold;">
-                <li class="list-group-item active" aria-current="true" style="background-color: #5A0F36;">Datos generales</li>
-                <li class="list-group-item">No. empleado: EMP102</li>
-                <li class="list-group-item">RFC: CAAJ9504027A3</li>
-                <li class="list-group-item">Puesto: Ing. Software</li>
-                <li class="list-group-item">Horario: Normal</li>
-              </ul>
-            </div>
-          </div>
-
-          <!--Tabla-->
-          <div id="container">
-            <table class="table table-hover">
-              <thead style="background-color:#5A0F36; color:white;">
-                <tr>
-                  <th scope="col">Fecha</th>
-                  <th scope="col">Hora entrada</th>
-                  <th scope="col">Hora salida</th>
-                  <th scope="col">Estado</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">2024-10-21</th>
-                  <td>08:55:30</td>
-                  <td>17:05:19</td>
-                  <td>✔</td>
-                </tr>
-                <tr>
-                  <th scope="row">2024-10-22</th>
-                  <td>08:58:04</td>
-                  <td>17:11:40</td>
-                  <td>✔</td>
-                </tr>
-                <tr>
-                  <th scope="row">2024-10-23</th>
-                  <td>09:35:21</td>
-                  <td>17:30:56</td>
-                  <td style="font-weight: bold; color: orange">RET.</td>
-                  <tr>
-                    <th scope="row">2024-10-24</th>
-                    <td>09:01:05</td>
-                    <td>17:01:05</td>
-                    <td>✔</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2024-10-25</th>
-                    <td> -- </td>
-                    <td> -- </td>
-                    <td style="font-weight:bolder; color: red;">✘</td>
-                  </tr>
-                
-              </tbody>
-            </table>
-          </div>
-
-              <form class="m-4">
-                <div class="mb-3">
-                  <label style="font-weight: bold;">Si tienes alguna incidencia enviala por este medio</label>
-                  <textarea class="form-control text-justify" id="validationTextarea" placeholder="Escribe tu incidencia en esta área."></textarea>
-                  <div class="d-flex justify-content-center m-2 p-1">
-                    <button id="btninc" type="submit" class="btn btn-outline-primary">
-                      Enviar
-                    </button>
-                </div>
-                </div>
-              </form>
-
-          
-          <footer
-          class="text-white text-center mt-2"
-          style="background-color: #5A0F36"
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-          <p class="m-0 p-4">©️ 2024 - Todos los derechos reservados.</p>
-        </footer>
-     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html"
+                >Cerrar sesión<span class="sr-only">(current)</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--Titulos-->
+    <div id="tittle" class="text-center m-3 rounded-lg pt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h4>Bienvenido JONATAN a tus registros de asistencia.</h4>
+            <br />
+            <div id="tittleinfo" class="text-left">
+              <blockquote class="blockquote">
+                <p>Aquí podras encontrar información relevante.</p>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div id="info" class="row text-left m-1 pb-3 rounded-lg">
+        <ul class="list-group" style="width: 450px; font-weight: bold">
+          <li
+            class="list-group-item active"
+            aria-current="true"
+            style="background-color: #5a0f36"
+          >
+            Datos generales
+          </li>
+          <li class="list-group-item">No. empleado: EMP102</li>
+          <li class="list-group-item">RFC: CAAJ9504027A3</li>
+          <li class="list-group-item">Puesto: Ing. Software</li>
+          <li class="list-group-item">Horario: Normal</li>
+        </ul>
+      </div>
+    </div>
+
+    <!--Tabla-->
+    <div id="container">
+      <table class="table table-hover">
+        <thead style="background-color: #5a0f36; color: white">
+          <tr>
+            <th scope="col">Fecha</th>
+            <th scope="col">Hora entrada</th>
+            <th scope="col">Hora salida</th>
+            <th scope="col">Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">2024-10-21</th>
+            <td>08:55:30</td>
+            <td>17:05:19</td>
+            <td>✔</td>
+          </tr>
+          <tr>
+            <th scope="row">2024-10-22</th>
+            <td>08:58:04</td>
+            <td>17:11:40</td>
+            <td>✔</td>
+          </tr>
+          <tr>
+            <th scope="row">2024-10-23</th>
+            <td>09:35:21</td>
+            <td>17:30:56</td>
+            <td style="font-weight: bold; color: orange">RET.</td>
+          </tr>
+
+          <tr>
+            <th scope="row">2024-10-24</th>
+            <td>09:01:05</td>
+            <td>17:01:05</td>
+            <td>✔</td>
+          </tr>
+          <tr>
+            <th scope="row">2024-10-25</th>
+            <td>--</td>
+            <td>--</td>
+            <td style="font-weight: bolder; color: red">✘</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <form class="m-4">
+      <div class="mb-3">
+        <label style="font-weight: bold"
+          >Si tienes alguna incidencia enviala por este medio</label
+        >
+        <textarea
+          class="form-control text-justify"
+          id="validationTextarea"
+          placeholder="Escribe tu incidencia en esta área."
+        ></textarea>
+        <div class="d-flex justify-content-center p-1">
+        <button type="button" class="btn btn-outline-primary" id="liveToastBtn">
+          Enviar
+        </button>
+      </div>
+        <div
+          class="position-fixed bottom-0 right-0 p-3"
+          style="z-index: 5; right: 0; bottom: 0"
+        >
+          <div
+            id="liveToast"
+            class="toast hide"
+            role="alert"
+            aria-live="assertive"
+            aria-atomic="true"
+            data-delay="2000"
+          >
+            <div class="toast-header">
+              <img src="assets/img/ipn_icon.jpg" class="rounded mr-2" style="height: 20px;
+              width: 20px;" />
+              <strong class="mr-auto">Aviso</strong>
+              <button
+                type="button"
+                class="ml-2 mb-1 close"
+                data-dismiss="toast"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="toast-body">En breve se le dará respuesta a tu incidencia.</div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <footer
+      class="text-white text-center mt-2"
+      style="background-color: #5a0f36"
+    >
+      <p class="m-0 p-4">©️ 2024 - Todos los derechos reservados.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
     <script src="assets/js/user.js"></script>
-</body>
+  </body>
 </html>

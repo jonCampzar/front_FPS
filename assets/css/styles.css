@@ -19,3 +19,7 @@ footer {
   color: white;
   text-align: center;
 }
+td{
+  font-size: small;
+  color: green;
+}

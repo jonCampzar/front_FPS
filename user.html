@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <!--CSS propio-->
-    <link rel="stylesheet/text" href="assets/css/styles.css" />
+    <link rel="stylesheet/text" href="/assets/css/styles.css" />
 </head>
 <body>
 
@@ -33,9 +33,104 @@
             </div>
            </nav>
 
+           <!--Titulos-->
+           <div id="tittle" class="text-center m-3 rounded-lg pt-4">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <h4>
+                    Bienvenido JONATAN a tus registros de asistencia.
+                  </h4>
+                  <br />
+                  <div id="tittleinfo" class="text-left">
+                    <blockquote class="blockquote">
+                    <p>Aqui podras encontrar información relevante.</p>
+                  </blockquote>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div id="info" class="row text-left m-1 pb-3 rounded-lg">
+              <ul class="list-group" style="width: 450px; font-weight: bold;">
+                <li class="list-group-item active" aria-current="true" style="background-color: #5A0F36;">Datos generales</li>
+                <li class="list-group-item">No. empleado: EMP102</li>
+                <li class="list-group-item">RFC: CAAJ9504027A3</li>
+                <li class="list-group-item">Puesto: Ing. Software</li>
+                <li class="list-group-item">Horario: Normal</li>
+              </ul>
+            </div>
+          </div>
 
+          <!--Tabla-->
+          <div id="container">
+            <table class="table table-hover">
+              <thead style="background-color:#5A0F36; color:white;">
+                <tr>
+                  <th scope="col">Fecha</th>
+                  <th scope="col">Hora entrada</th>
+                  <th scope="col">Hora salida</th>
+                  <th scope="col">Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">2024-10-21</th>
+                  <td>08:55:30</td>
+                  <td>17:05:19</td>
+                  <td>✔</td>
+                </tr>
+                <tr>
+                  <th scope="row">2024-10-22</th>
+                  <td>08:58:04</td>
+                  <td>17:11:40</td>
+                  <td>✔</td>
+                </tr>
+                <tr>
+                  <th scope="row">2024-10-23</th>
+                  <td>09:35:21</td>
+                  <td>17:30:56</td>
+                  <td style="font-weight: bold; color: orange">RET.</td>
+                  <tr>
+                    <th scope="row">2024-10-24</th>
+                    <td>09:01:05</td>
+                    <td>17:01:05</td>
+                    <td>✔</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2024-10-25</th>
+                    <td> -- </td>
+                    <td> -- </td>
+                    <td style="font-weight:bolder; color: red;">✘</td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          </div>
+
+              <form class="m-4">
+                <div class="mb-3">
+                  <label style="font-weight: bold;">Si tienes alguna incidencia enviala por este medio</label>
+                  <textarea class="form-control text-justify" id="validationTextarea" placeholder="Escribe tu incidencia en esta área."></textarea>
+                  <div class="d-flex justify-content-center m-2 p-1">
+                    <button id="btninc" type="submit" class="btn btn-outline-primary">
+                      Enviar
+                    </button>
+                </div>
+                </div>
+              </form>
+
+          
+          <footer
+          class="text-white text-center mt-2"
+          style="background-color: #5A0F36"
+        >
+          <p class="m-0 p-4">©️ 2024 - Todos los derechos reservados.</p>
+        </footer>
      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/user.js"></script>
 </body>
 </html>

@@ -306,6 +306,25 @@
                 </div>
                 <div class="col-md-6 col-12">
                   <div class="form-group font-weight-bold">
+                    <label for="inputrole">Rol:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputrole"
+                      list="roleOptions"
+                      aria-describedby="roleHelp"
+                    />
+                    <datalist id="roleOptions">
+                      <option value="Usuario"></option>
+                      <option value="Administrador"></option>
+                    </datalist>
+                    <small id="roleHelp" class="form-text text-muted"
+                      >Selecciona un rol.</small
+                    >
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="form-group font-weight-bold">
                     <label for="InputPassword" class="text-danger"
                       >Contraseña:</label
                     >
@@ -314,12 +333,12 @@
                       class="form-control"
                       id="inputPassword1"
                     />
-                    <small id="psHelp" class="form-text text-warning"
+                    <small id="psHelp" class="form-text text-danger font-weight-bold"
                       >Aquí crearas una contraseña para el nuevo usuario.</small
                     >
                   </div>
                 </div>
-                <div class="col-12">
+                <div class="col-12 p-2">
                   <div class="form-group form-check">
                     <input
                       type="checkbox"

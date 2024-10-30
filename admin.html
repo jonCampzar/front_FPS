@@ -11,6 +11,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
     <!--CSS propio-->
     <link rel="stylesheet/text" href="/assets/css/styles.css" />
   </head>
@@ -149,8 +151,10 @@
           role="tabpanel"
           aria-labelledby="apartado1-tab"
         >
-          <h4 class="text-uppercase" style="color: #5a0f36;">Creación de usuario</h4>
-          <h5 class="font-italic m-4 text-center" style="color: #5a0f36;">
+          <h4 class="text-uppercase" style="color: #5a0f36">
+            Creación de usuario
+          </h4>
+          <h5 class="font-italic m-4 text-center" style="color: #5a0f36">
             En este apartado podras completar la información de los nuevos
             usuarios.
           </h5>
@@ -333,7 +337,9 @@
                       class="form-control"
                       id="inputPassword1"
                     />
-                    <small id="psHelp" class="form-text text-danger font-weight-bold"
+                    <small
+                      id="psHelp"
+                      class="form-text text-danger font-weight-bold"
                       >Aquí crearas una contraseña para el nuevo usuario.</small
                     >
                   </div>
@@ -351,7 +357,11 @@
                   </div>
                 </div>
                 <div class="col-12 mt-4 pb-4 text-center">
-                  <button type="submit" class="btn btn-outline-primary btn-lg">
+                  <button
+                    type="submit"
+                    id="btncreate"
+                    class="btn btn-outline-primary btn-lg"
+                  >
                     Enviar
                   </button>
                 </div>
@@ -359,23 +369,210 @@
             </div>
           </div>
         </div>
+
+
         <div
           class="tab-pane fade p-3"
           id="apartado2"
           role="tabpanel"
           aria-labelledby="apartado2-tab"
         >
-          <h3>Consulta de usuario</h3>
-          <p>
+          <h4 class="text-uppercase" style="color: #5a0f36">
+            Consulta de usuario
+          </h4>
+          <h5 class="font-italic m-4 text-center" style="color: #5a0f36">
             En este apartado podras consultar la información y registros de los
             usuarios.
-          </p>
-          <div class="d-flex justify-content-center pt-5">
+          </h5>
+
+
+          <div class="container">
             <div class="row">
-                <img src="assets/img/work.png" alt="" style="height: 200px; width: 200px;">
+              <form class="row">
+
+                <div class="col-md-6 col-12">
+                  <div class="form-group font-weight-bold">
+                    <label for="fecha">Selecciona un rango de fechas:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="fecha"
+                      aria-describedby="fechaHelp"
+                    />
+                    <small id="fechaHelp" class="form-text text-muted"
+                      >Ingresa un rango de fechas válido.</small
+                    >
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-12">
+                  <div class="form-group font-weight-bold">
+                    <label for="inputIdread">Id de usuario:</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      min="1"
+                      id="inputIdread"
+                      aria-describedby="idreadHelp"
+                    />
+                    <small id="idreasHelp" class="form-text text-muted"
+                      >Por favor ingresa un número de Id para consulta.</small
+                    >
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="form-group font-weight-bold">
+                    <label for="inputNempread">Número de empleado:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputNempread"
+                      aria-describedby="nempreadHelp"
+                      value="EMP0"
+                    />
+                    <small id="nameHelp" class="form-text text-muted"
+                      >Ingresa el número de empleado para consulta.</small
+                    >
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-12">
+                  <div class="form-group font-weight-bold">
+                      <label for="inputall">¿Deseas consultar a todos los usuarios?</label>
+                      <input
+                          type="checkbox"
+                          class="form-check"
+                          id="inputall"
+                          aria-describedby="allHelp"
+                      style="height: 20px; width: 20px;"/>
+                      <small id="allHelp" class="form-text text-muted">
+                          Selecciona esta opción para consultar a todos los usuarios.
+                      </small>
+                  </div>
+              </div>
+              
+
+
+                <div class="col-12 mt-4 pb-5 text-center">
+                  <button
+                    type="submit"
+                    id="btnread"
+                    class="btn btn-outline-primary btn-lg"
+                  >
+                    Consulta
+                  </button>
+                </div>
+              </form>
             </div>
+          </div>
+
+          <h4 class="text-uppercase pt-3 text-center font-italic" style="color: #5a0f36">Información de usuario</h4>
+          
+            <div class="row text-start pt-3">
+                <div class="col-md-6 col-12 pt-3">
+                    <h5 class="font-weight-bold">Nombre: Jonatan Campos Arriaran</h5>
+                </div>
+                <div class="col-md-6 col-12 pt-3">
+                    <h5 class="font-weight-bold">RFC: CART9756325A1</h5>
+                </div>
+            </div>
+            <div class="row text-start">
+                <div class="col-md-6 col-12 pt-3">
+                    <h5 class="font-weight-bold">Puesto: Ingeniero de software</h5>
+                </div>
+                <div class="col-md-6 col-12 pt-3">
+                    <h5 class="font-weight-bold">Turno: Mixto</h5>
+                </div>
+            </div>
+            <div class="row text-start pb-4">
+              <div class="col-md-6 col-12 pt-3">
+                  <h5 class="font-weight-bold">Estado: Activo</h5>
+              </div>
+              <div class="col-md-6 col-12 pt-3">
+                  <h5 class="font-weight-bold">Correo electrónico: jon@example.com</h5>
+              </div>
+          </div>
+
+          <table class="table table-hover p-3" id="tableread">
+            <thead style="background-color: #5a0f36; color: white">
+              <tr>
+                <th scope="col">Fecha</th>
+                <th scope="col">Hora entrada</th>
+                <th scope="col">Hora salida</th>
+                <th scope="col">Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">2024-10-21</th>
+                <td>08:55:30</td>
+                <td>17:05:19</td>
+                <td><img src="assets/img/ok.png" style="height: 30px; width: 30px;"></td>
+              </tr>
+              <tr>
+                <th scope="row">2024-10-22</th>
+                <td>08:58:04</td>
+                <td>17:11:40</td>
+                <td><img src="assets/img/ok.png" style="height: 30px; width: 30px;"></td>
+              </tr>
+              <tr>
+                <th scope="row">2024-10-23</th>
+                <td>09:35:21</td>
+                <td>17:30:56</td>
+                <td><img src="assets/img/wr.png" style="height: 30px; width: 30px;"></td>
+              </tr>
+    
+              <tr>
+                <th scope="row">2024-10-24</th>
+                <td>09:01:05</td>
+                <td>17:01:05</td>
+                <td><img src="assets/img/ok.png" style="height: 30px; width: 30px;"></td>
+              </tr>
+              <tr>
+                <th scope="row">2024-10-25</th>
+                <td>-- --</td>
+                <td>-- --</td>
+                <td><img src="assets/img/no.png" style="height: 30px;
+                  width: 30px;"></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="col text-center p-3">
+            <button type="button" class="btn btn-warning btn-lg" data-bs-toggle="modal" data-bs-target="#incidenciasModal">
+              Incidencias <span class="badge badge-light">2</span>
+          </button>
         </div>
+
+        <div class="modal fade" id="incidenciasModal" tabindex="-1" aria-labelledby="incidenciasModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="incidenciasModalLabel">Incidencias</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <h5>Lista de incidencias enviadas</h5>
+                      <p>
+                          <a href="#tableread" role="button" class="btn btn-secondary popover-test" title="Incidencias" 
+                          data-bs-toggle="popover" data-bs-content="El día 25 de octubre sí me presenté a trabajar.">Ver incidencia</a>
+                      </p>
+                      <hr>
+                      <p>
+                          <a href="#tableread" role="button" class="btn btn-secondary popover-test" title="Incidencias" 
+                          data-bs-toggle="popover" data-bs-content="El día 23 de octubre llegué temprano.">Ver incidencia</a>
+                      </p>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
         </div>
+
+
         <div
           class="tab-pane fade p-3"
           id="apartado3"
@@ -389,9 +586,13 @@
           </p>
           <div class="d-flex justify-content-center pt-5">
             <div class="row">
-                <img src="assets/img/work.png" alt="" style="height: 200px; width: 200px;">
+              <img
+                src="assets/img/work.png"
+                alt=""
+                style="height: 200px; width: 200px"
+              />
             </div>
-        </div>
+          </div>
         </div>
         <div
           class="tab-pane fade p-3"
@@ -403,17 +604,25 @@
           <p>En este apartado podras eliminar usuarios.</p>
           <div class="d-flex justify-content-center pt-5">
             <div class="row">
-                <img src="assets/img/work.png" alt="" style="height: 200px; width: 200px;">
+              <img
+                src="assets/img/work.png"
+                alt=""
+                style="height: 200px; width: 200px"
+              />
             </div>
-        </div>
+          </div>
         </div>
       </div>
     </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/l10n/es.js"></script>
+
     <script src="assets/js/admin.js"></script>
   </body>
 </html>

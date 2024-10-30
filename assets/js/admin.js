@@ -17,6 +17,25 @@ document.addEventListener("DOMContentLoaded", function() {
   updateClock();
 });
 
+//CALENDARIO
+document.addEventListener("DOMContentLoaded", function() {
+  flatpickr("#fecha", {
+    mode: "range",           // Activa el modo de selección de rango
+    dateFormat: "Y-m-d",     // Formato de fecha
+    locale: "es"             // Opcional: cambia el idioma a español
+  });
+});
+
+//modal
+
+document.addEventListener("DOMContentLoaded", function() {
+  var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+  var popoverList = popoverTriggerList.map(function(popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl);
+  });
+});
+
+
 document.getElementById("btnadmin").addEventListener("click", function() {
   window.location.href = "index.html"; 
 });

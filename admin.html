@@ -23,8 +23,12 @@
       <!-- sticky pone la barra estatica -->
       <div class="container">
         <a class="navbar-brand">
-          <img class="img-flex" src="assets/img/ipnnav.jpg" style="height: 50px; width: 60px; border-radius: 30%;">
-      </a>
+          <img
+            class="img-flex"
+            src="assets/img/ipnnav.jpg"
+            style="height: 50px; width: 60px; border-radius: 30%"
+          />
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -48,34 +52,334 @@
       </div>
     </nav>
 
-    <div class="text-right m-4 font-weight-bold"> Hora actual: <span id="clockadmin"></span></div>
+    <div class="text-right m-4 font-weight-bold">
+      Hora actual: <span id="clockadmin"></span>
+    </div>
 
     <!--Titulos-->
     <div id="tittle" class="text-center m-1 rounded-lg pt-1">
       <div class="container">
         <div class="row">
           <div class="col">
-            <h4>Bienvenido ADMIN, desde este sitio podras gestionar los registros de asistencia.</h4>
+            <h3>
+              Bienvenido ADMIN, desde este sitio podras gestionar los registros
+              de asistencia.
+            </h3>
             <br />
             <div id="tittleinfo" class="text-left">
               <blockquote class="blockquote">
-                <p>En breve la página estará disponible.</p>
+                <p class="font-weight-bold">
+                  Buenos dias, ¿qué operación deseas realizar?
+                </p>
               </blockquote>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="d-flex justify-content-center pt-5">
-        <div class="row">
-            <img src="assets/img/work.png" alt="" style="height: 200px; width: 200px;">
-        </div>
-    </div>
 
+    <!--Apartados-->
+
+    <div class="container mt-2">
+      <!-- Navegación de pestañas -->
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="btn btn-primary"
+            id="apartado1-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#apartado1"
+            type="button"
+            role="tab"
+            aria-controls="apartado1"
+            aria-selected="true"
+          >
+            Creación
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="btn btn-secondary"
+            id="apartado2-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#apartado2"
+            type="button"
+            role="tab"
+            aria-controls="apartado2"
+            aria-selected="false"
+          >
+            Consulta
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="btn btn-warning"
+            id="apartado3-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#apartado3"
+            type="button"
+            role="tab"
+            aria-controls="apartado3"
+            aria-selected="false"
+          >
+            Edición
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="btn btn-danger"
+            id="apartado4-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#apartado4"
+            type="button"
+            role="tab"
+            aria-controls="apartado4"
+            aria-selected="false"
+          >
+            Eliminación
+          </button>
+        </li>
+      </ul>
+
+      <!-- Contenido de cada apartado -->
+      <div class="tab-content pt-3" id="myTabContent">
+        <div
+          class="tab-pane fade show active p-3"
+          id="apartado1"
+          role="tabpanel"
+          aria-labelledby="apartado1-tab"
+        >
+          <h4>Creación de usuario</h4>
+          <h5 class="font-italic m-4 text-center">
+            En este apartado podras completar la información de los nuevos
+            usuarios.
+          </h5>
+          <div class="container">
+            <div class="row">
+              <form class="row">
+                <div class="col-md-6 col-12">
+                  <div class="form-group font-weight-bold">
+                    <label for="inputId">Id de usuario:</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      min="1"
+                      id="inputId"
+                      aria-describedby="idHelp"
+                    />
+                    <small id="idHelp" class="form-text text-muted"
+                      >Por favor ingresa un número de Id válido.</small
+                    >
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="form-group font-weight-bold">
+                    <label for="inputNemp">Número de empleado:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputNemp"
+                      aria-describedby="nempHelp"
+                      value="EMP0"
+                    />
+                    <small id="nameHelp" class="form-text text-muted"
+                      >Ingresa el número de empleado en función del Id.</small
+                    >
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="form-group font-weight-bold">
+                    <label for="inputName">Nombre:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputName"
+                      aria-describedby="nameHelp"
+                    />
+                    <small id="nameHelp" class="form-text text-muted"
+                      >Ingresa el nombre.</small
+                    >
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="form-group font-weight-bold">
+                    <label for="inputLastname">Apellido paterno:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputLastname"
+                      aria-describedby="lnameHelp"
+                    />
+                    <small id="lnameHelp" class="form-text text-muted"
+                      >Ingresa el apellido paterno.</small
+                    >
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="form-group font-weight-bold">
+                    <label for="inputLastsname">Apellido materno:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputLastsname"
+                      aria-describedby="lsnameHelp"
+                    />
+                    <small id="lsnameHelp" class="form-text text-muted"
+                      >Ingresa el apellido materno.</small
+                    >
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="form-group font-weight-bold">
+                    <label for="inputrfc">RFC:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputrfc"
+                      aria-describedby="rfcHelp"
+                    />
+                    <small id="rfcHelp" class="form-text text-muted"
+                      >Ingresa el RFC.</small
+                    >
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="form-group font-weight-bold">
+                    <label for="inputEmail"
+                      >Dirección de correo electrónico:</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="inputEmail1"
+                      aria-describedby="emailHelp"
+                    />
+                    <small id="emailHelp" class="form-text text-muted"
+                      >Ingresa el correo electrónico.</small
+                    >
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="form-group font-weight-bold">
+                    <label for="inputJob">Puesto:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputJob"
+                      list="jobOptions"
+                      aria-describedby="jobHelp"
+                    />
+                    <datalist id="jobOptions">
+                      <option value="Ingenier@ de software"></option>
+                      <option value="Abogad@"></option>
+                      <option value="Limpieza"></option>
+                      <option value="Técnico"></option>
+                      <option value="Administrativo"></option>
+                      <option value="Otro"></option>
+                    </datalist>
+                    <small id="jobHelp" class="form-text text-muted"
+                      >Selecciona un puesto.</small
+                    >
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="form-group font-weight-bold">
+                    <label for="inputsc">Horario:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputsc"
+                      list="scOptions"
+                      aria-describedby="scHelp"
+                    />
+                    <datalist id="scOptions">
+                      <option value="Matutino"></option>
+                      <option value="Vespertino"></option>
+                      <option value="Mixto"></option>
+                      <option value="Nocturno"></option>
+                      <option value="Otro"></option>
+                    </datalist>
+                    <small id="scHelp" class="form-text text-muted"
+                      >Selecciona un horario.</small
+                    >
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="form-group font-weight-bold">
+                    <label for="InputPassword" class="text-danger"
+                      >Contraseña:</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="inputPassword1"
+                    />
+                    <small id="psHelp" class="form-text text-warning"
+                      >Aquí crearas una contraseña para el nuevo usuario.</small
+                    >
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group form-check">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="exampleCheck1"
+                    />
+                    <label class="form-check-label" for="exampleCheck1"
+                      >¿Estas seguro de la creación de este usuario?</label
+                    >
+                  </div>
+                </div>
+                <div class="col-12 mt-4 pb-4 text-center">
+                  <button type="submit" class="btn btn-primary btn-lg">
+                    Enviar
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade p-3"
+          id="apartado2"
+          role="tabpanel"
+          aria-labelledby="apartado2-tab"
+        >
+          <h3>Consulta de usuario</h3>
+          <p>
+            En este apartado podras consultar la información y registros de los
+            usuarios.
+          </p>
+        </div>
+        <div
+          class="tab-pane fade p-3"
+          id="apartado3"
+          role="tabpanel"
+          aria-labelledby="apartado3-tab"
+        >
+          <h3>Edición de usuario</h3>
+          <p>
+            En este apartado podras editar la información y registros de los
+            usuarios.
+          </p>
+        </div>
+        <div
+          class="tab-pane fade p-3"
+          id="apartado4"
+          role="tabpanel"
+          aria-labelledby="apartado4-tab"
+        >
+          <h3>Eliminación de usuario</h3>
+          <p>En este apartado podras eliminar usuarios.</p>
+        </div>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/admin.js"></script>
   </body>
 </html>

@@ -20,3 +20,12 @@ setInterval(updateClock, 1000);
 
 // Llama inmediatamente para mostrar la hora sin esperar el primer segundo
 updateClock();
+
+document.addEventListener("DOMContentLoaded", function() {
+  flatpickr("#fechauser", {
+    mode: "range",           // Activa el modo de selección de rango
+    dateFormat: "Y-m-d",     // Formato de fecha
+    locale: "es"             // Opcional: cambia el idioma a español
+  });
+
+});

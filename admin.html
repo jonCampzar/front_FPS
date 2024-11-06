@@ -64,8 +64,6 @@
         <div class="row">
           <div class="col">
             <h3>
-              Bienvenido ADMIN, desde este sitio podras gestionar los registros
-              de asistencia.
             </h3>
             <br />
             <div id="tittleinfo" class="text-left">
@@ -361,8 +359,7 @@
                     type="submit"
                     id="btncreate"
                     class="btn btn-outline-primary btn-lg"
-                  >
-                    Enviar
+                  >Crear
                   </button>
                 </div>
               </form>
@@ -579,38 +576,395 @@
           role="tabpanel"
           aria-labelledby="apartado3-tab"
         >
-          <h3>Edición de usuario</h3>
-          <p>
-            En este apartado podras editar la información y registros de los
-            usuarios.
-          </p>
-          <div class="d-flex justify-content-center pt-5">
-            <div class="row">
-              <img
-                src="assets/img/work.png"
-                alt=""
-                style="height: 200px; width: 200px"
-              />
-            </div>
+        <h4 class="text-uppercase" style="color: #5a0f36">
+          Edición de usuario
+        </h4>
+        <h5 class="font-italic m-4 text-center" style="color: #5a0f36">
+          En este apartado podras editar la información y registros de los
+          usuarios.
+        </h5>
+        <div class="container">
+          <div class="row">
+            <form class="row">
+              <div class="col-md-6 col-12">
+                <div class="form-group font-weight-bold">
+                  <label for="inputIdEdit">Id de usuario:</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    min="1"
+                    id="inputIdEdit"
+                    aria-describedby="idHelp"
+                  />
+                  <small id="idHelp" class="form-text text-muted"
+                    >Por favor ingresa un número de Id que quieras editar.</small
+                  >
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="form-group font-weight-bold">
+                  <label for="inputNempEdit">Número de empleado:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputNempEdit"
+                    aria-describedby="nempHelp"
+                    value="EMP0"
+                  />
+                  <small id="nameHelp" class="form-text text-muted"
+                    >Ingresa el número de empleado.</small
+                  >
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="form-group font-weight-bold">
+                  <label for="inputNameEdit">Nombre:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputNameEdit"
+                    aria-describedby="nameHelp"
+                  />
+                  <small id="nameHelp" class="form-text text-muted"
+                    >Ingresa el nombre.</small
+                  >
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="form-group font-weight-bold">
+                  <label for="inputLastname">Apellido paterno:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputLastnameEdit"
+                    aria-describedby="lnameHelp"
+                  />
+                  <small id="lnameHelp" class="form-text text-muted"
+                    >Ingresa el apellido paterno.</small
+                  >
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="form-group font-weight-bold">
+                  <label for="inputLastsname">Apellido materno:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputLastsnameEdit"
+                    aria-describedby="lsnameHelp"
+                  />
+                  <small id="lsnameHelp" class="form-text text-muted"
+                    >Ingresa el apellido materno.</small
+                  >
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="form-group font-weight-bold">
+                  <label for="inputrfc">RFC:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputrfcedit"
+                    aria-describedby="rfcHelp"
+                  />
+                  <small id="rfcHelp" class="form-text text-muted"
+                    >Ingresa el RFC.</small
+                  >
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="form-group font-weight-bold">
+                  <label for="inputEmail"
+                    >Dirección de correo electrónico:</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="inputEmailedit"
+                    aria-describedby="emailHelp"
+                  />
+                  <small id="emailHelp" class="form-text text-muted"
+                    >Ingresa el correo electrónico.</small
+                  >
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="form-group font-weight-bold">
+                  <label for="inputJob">Puesto:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputJobEdit"
+                    list="jobOptions"
+                    aria-describedby="jobHelp"
+                  />
+                  <datalist id="jobOptions">
+                    <option value="Ingenier@ de software"></option>
+                    <option value="Abogad@"></option>
+                    <option value="Limpieza"></option>
+                    <option value="Técnico"></option>
+                    <option value="Administrativo"></option>
+                    <option value="Otro"></option>
+                  </datalist>
+                  <small id="jobHelp" class="form-text text-muted"
+                    >Selecciona un puesto.</small
+                  >
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="form-group font-weight-bold">
+                  <label for="inputsc">Horario:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputscEdit"
+                    list="scOptions"
+                    aria-describedby="scHelp"
+                  />
+                  <datalist id="scOptions">
+                    <option value="Matutino"></option>
+                    <option value="Vespertino"></option>
+                    <option value="Mixto"></option>
+                    <option value="Nocturno"></option>
+                    <option value="Otro"></option>
+                  </datalist>
+                  <small id="scHelp" class="form-text text-muted"
+                    >Selecciona un horario.</small
+                  >
+                </div>
+              </div>
+
+              <div class="col-md-6 col-12">
+                <div class="form-group font-weight-bold">
+                  <label for="inputrole">Rol:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputroleEdit"
+                    list="roleOptions"
+                    aria-describedby="roleHelp"
+                  />
+                  <datalist id="roleOptions">
+                    <option value="Usuario"></option>
+                    <option value="Administrador"></option>
+                  </datalist>
+                  <small id="roleHelp" class="form-text text-muted"
+                    >Selecciona un rol.</small
+                  >
+                </div>
+              </div>
+
+              <div class="col-md-6 col-12">
+                <div class="form-group font-weight-bold">
+                  <label for="inputrole">Estatus:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputStatusEdit"
+                    list="statusOptions"
+                    aria-describedby="statusHelp"
+                  />
+                  <datalist id="statusOptions">
+                    <option value="Activo"></option>
+                    <option value="Inactivo"></option>
+                  </datalist>
+                  <small id="statusHelp" class="form-text text-muted"
+                    >Selecciona el estatus del empleado.</small
+                  >
+                </div>
+              </div>
+
+              <div class="col-md-6 col-12">
+                <div class="form-group font-weight-bold">
+                  <label for="InputPassword"
+                    >Contraseña:</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputPasswordEdit"
+                  />
+                  <small
+                    id="psHelp"
+                    class="form-text text-muted "
+                    >Aquí editarás la contraseña del usuario.</small
+                  >
+                </div>
+              </div>
+
+              <div class="col-md-6 col-12 ">
+                <div class="form-group form-check pt-3">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="editCheckdate"
+                    style="height: 20px; width: 20px;"
+                  />
+                  <label class="form-check-label text-danger font-weight-bold"  for="editCheckdate" style="margin-inline-start: 15px"
+                    >¿Quieres editar un registro? Da clic aquí.</label
+                  >
+                </div>
+              </div>
+
+              <div class="col-md-6 col-12">
+                <div class="form-group font-weight-bold">
+                  <label for="fecha" class="text-warning">Selecciona una fecha:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="fechaedit"
+                    aria-describedby="fechaHelp"
+                    disabled
+                  />
+                  <small id="fechaHelp" class="form-text text-warning font-weight-bold"
+                    >Ingresa la fecha a editar.</small
+                  >
+                </div>
+              </div>
+
+              <div class="col-md-6 col-12">
+                <div class="form-group font-weight-bold">
+                  <label for="hourentry" class="text-warning">Selecciona la hora de entrada:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="entryedit"
+                    aria-describedby="entryHelp"
+                    disabled
+                  />
+                  <small id="entryHelp" class="form-text text-warning font-weight-bold"
+                    >Ingresa la nueva hora de entrada.</small
+                  >
+                </div>
+              </div>
+
+
+              <div class="col-md-6 col-12">
+                <div class="form-group font-weight-bold">
+                  <label for="timedep" class="text-warning">Selecciona la hora de salida:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="timedep"
+                    aria-describedby="depHelp"
+                    disabled
+                  />
+                  <small id="depHelp" class="form-text text-warning font-weight-bold"
+                    >Ingresa la nueva hora de salida.</small
+                  >
+                </div>
+              </div>
+
+
+              <div class="col-12 p-2">
+                <div class="form-group form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="exampleCheck1"
+                    style="height: 20px; width: 20px;"
+                  />
+                  <label class="form-check-label text-danger font-weight-bold" for="exampleCheck1" style="margin-inline-start: 15px"
+                    >¿Estas seguro de la edición de este usuario?</label
+                  >
+                </div>
+              </div>
+
+              <div class="col-12 mt-4 pb-4 text-center">
+                <button
+                  type="submit"
+                  id="btnedit"
+                  class="btn btn-outline-warning btn-lg"
+                >Editar
+                </button>
+              </div>
+            </form>
           </div>
         </div>
+
+        </div>
+
+
+
         <div
           class="tab-pane fade p-3"
           id="apartado4"
           role="tabpanel"
           aria-labelledby="apartado4-tab"
         >
-          <h3>Eliminación de usuario</h3>
-          <p>En este apartado podras eliminar usuarios.</p>
-          <div class="d-flex justify-content-center pt-5">
-            <div class="row">
-              <img
-                src="assets/img/work.png"
-                alt=""
-                style="height: 200px; width: 200px"
-              />
+        <h4 class="text-uppercase" style="color: #5a0f36">
+          Eliminación de usuario
+        </h4>
+        <h5 class="font-italic m-4 text-center" style="color: #5a0f36">
+          En este apartado podras eliminar un usuario.
+        </h5>
+
+        <div class="container">
+            <form class="row">
+
+              <div class="col-md-6 col-12">
+                <div class="form-group font-weight-bold">
+                  <label for="inputIddelete" class="text-danger">Id de usuario:</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    min="1"
+                    id="inputIddelete"
+                    aria-describedby="idreadHelp"
+                  />
+                  <small id="iddelHelp" class="form-text text-muted"
+                    >Por favor ingresa el número de Id a eliminar.</small
+                  >
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="form-group font-weight-bold ">
+                  <label for="inputNempdel" class="text-danger">Número de empleado:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputNempdel"
+                    aria-describedby="nempreadHelp"
+                    value="EMP0"
+                  />
+                  <small id="namedelHelp" class="form-text text-muted"
+                    >Ingresa el número de empleado a eliminar.</small
+                  >
+                </div>
+              </div>
+
+              <div class="col-md-6 col-12">
+                <div class="form-group font-weight-bold">
+                    <label for="inputdeluser" class="text-danger font-weight-bold">¿Deseas eliminar a este usuario?</label>
+                    <input
+                        type="checkbox"
+                        class="form-check"
+                        id="inputall"
+                        aria-describedby="allHelp"
+                    style="height: 20px; width: 20px;"/>
+                    <small id="allHelp" class="form-text text-muted">
+                        Selecciona esta opción para eliminar.
+                    </small>
+                </div>
             </div>
-          </div>
+            
+
+
+              <div class="col-12 mt-4 pb-5 text-center">
+                <button
+                  type="submit"
+                  id="btndelete"
+                  class="btn btn-outline-danger btn-lg"
+                >
+                  Borrar
+                </button>
+              </div>
+            </form>
+        </div>
+
+
+
+
         </div>
       </div>
     </div>

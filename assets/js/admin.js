@@ -24,6 +24,33 @@ document.addEventListener("DOMContentLoaded", function() {
     dateFormat: "Y-m-d",     // Formato de fecha
     locale: "es"             // Opcional: cambia el idioma a español
   });
+  flatpickr("#fechaedit", {
+    mode: "single",           // Activa el modo de selección de rango
+    dateFormat: "Y-m-d",     // Formato de fecha
+    locale: "es"             // Opcional: cambia el idioma a español
+  });
+  flatpickr("#entryedit", {
+    enableTime: true,       // Activa el selector de hora
+    noCalendar: true,       // Desactiva el calendario
+    dateFormat: "H:i",      // Formato de hora (24 horas). Para 12 horas usa "h:i K"
+    locale: "es" 
+  });
+  flatpickr("#timedep", {
+    enableTime: true,       // Activa el selector de hora
+    noCalendar: true,       // Desactiva el calendario
+    dateFormat: "H:i",      // Formato de hora (24 horas). Para 12 horas usa "h:i K"
+    locale: "es" 
+  });
+
+  const checkbox = document.getElementById("editCheckdate");
+  const inputs = ["fechaedit", "entryedit", "timedep"].map(id => document.getElementById(id));
+
+  // Escuchar cambios en el checkbox
+  checkbox.addEventListener("change", function () {
+      // Habilita o deshabilita los inputs según el estado del checkbox
+      inputs.forEach(input => input.disabled = !checkbox.checked);
+  });
+
 });
 
 //modal

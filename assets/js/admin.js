@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //CALENDARIO
 document.addEventListener("DOMContentLoaded", function() {
+
   flatpickr("#fecha", {
     mode: "range",           // Activa el modo de selección de rango
     dateFormat: "Y-m-d",     // Formato de fecha
@@ -45,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const checkbox = document.getElementById("editCheckdate");
   const inputs = ["fechaedit", "entryedit", "timedep"].map(id => document.getElementById(id));
 
+  inputs.forEach(input => input.disabled = true);
   // Escuchar cambios en el checkbox
   checkbox.addEventListener("change", function () {
       // Habilita o deshabilita los inputs según el estado del checkbox

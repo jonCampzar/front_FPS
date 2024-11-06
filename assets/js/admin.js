@@ -46,12 +46,19 @@ document.addEventListener("DOMContentLoaded", function() {
   const checkbox = document.getElementById("editCheckdate");
   const inputs = ["fechaedit", "entryedit", "timedep"].map(id => document.getElementById(id));
 
-  inputs.forEach(input => input.disabled = true);
+  // Función para mostrar u ocultar los inputs
+  function toggleInputs() {
+    const display = checkbox.checked ? "block" : "none";  // Si el checkbox está marcado, mostrar, sino ocultar
+    inputs.forEach(input => {
+      input.closest('.col-md-6').style.display = display;  // Muestra u oculta toda la columna
+    });
+  }
+
   // Escuchar cambios en el checkbox
-  checkbox.addEventListener("change", function () {
-      // Habilita o deshabilita los inputs según el estado del checkbox
-      inputs.forEach(input => input.disabled = !checkbox.checked);
-  });
+  checkbox.addEventListener("change", toggleInputs);
+
+  // Ejecutar la función al cargar la página para asegurarse de que estén ocultos por defecto
+  toggleInputs();
 
 });
 
